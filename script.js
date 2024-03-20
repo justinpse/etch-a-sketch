@@ -15,3 +15,11 @@ for (let i = 0; i < rowNum; i++) {
 
     container.appendChild(row);
 };
+
+let cells = document.getElementsByClassName('square');
+
+for (let i = 0; i < cells.length; i++) {
+    cells[i].addEventListener('mouseenter', () => {
+        cells[i].style.backgroundColor = 'black';
+    });
+};
