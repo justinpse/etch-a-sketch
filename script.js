@@ -5,10 +5,15 @@ let container = document.getElementById('container');
 
 for (let i = 0; i < rowNum; i++) {
     let row = document.createElement('div');
+    row.className = 'row';
+    row.style.height = (container.clientHeight / rowNum) + 'px';
+    row.style.width = container.clientWidth + 'px';
 
     for (let i = 0; i < colNum; i++) {
         let col = document.createElement('div');
         col.className = 'square';
+        col.style.height = row.style.height;
+        col.style.width = (container.clientWidth / colNum) + 'px';
 
         row.appendChild(col);
     };
