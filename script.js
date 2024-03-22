@@ -39,7 +39,13 @@ let size;
 
 function sizePrompt() {
     let userInput = prompt("Please provide grid size:");
-    size = parseInt(userInput);
+    
+    if (parseInt(userInput) > 100) {
+        size = 100;
+    } else {
+        size = parseInt(userInput);
+    };
+
     createGrid();
 };
 
