@@ -28,3 +28,10 @@ for (let i = 0; i < cells.length; i++) {
         cells[i].style.backgroundColor = 'black';
     });
 };
+
+let size;
+
+function sizePrompt() {
+    let userInput = prompt("Please provide grid size:");
+    size = parseInt(userInput);
+};
